@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Add styles for the navbar */
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        /* Add styles for the FAQ section */
+        .faq-container {
+            width: 70%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Styles for questions */
+        .question {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Styles for answers */
+        .answer {
+            display: none;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* Styles for answer visibility */
+        .visible {
+            display: block;
+        }
+
+        /* Toggle button style */
+        .toggle-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+    <script>
+        // Add JavaScript to toggle the visibility of answers
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            answer.classList.toggle('visible');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+        <div>
+            <a href="index.html">Home</a>
+        </div>
+        <div>
+            <a href="/templates/contact.html">Contact Us</a>
+            <a href="/templates/faq.html">FAQ</a>
+        </div>
+    </div>
+
+    <div class="faq-container">
+        <h2 style="text-decoration-line: underline;">Frequently Asked Questions</h2>
+        <div class="question" onclick="toggleAnswer('answer1')">1. What is Phishing?</div>
+        <div id="answer1" class="answer">Phishing is a cyber attack method where malicious actors attempt to deceive
+            individuals into revealing sensitive information such as usernames, passwords, or financial details by
+            posing as trustworthy entities.
+        </div>
+        <div class="question" onclick="toggleAnswer('answer2')">2. How does Phishing URL detection work?</div>
+        <div id="answer2" class="answer">Phishing URL detection involves analyzing various characteristics of a URL
+            (Uniform Resource Locator) to identify potential phishing attempts. It utilizes algorithms and models that
+            assess the URL's structure, domain reputation, content, and more to determine its legitimacy.
+        </div>
+        <div class="question" onclick="toggleAnswer('answer3')">3. How accurate is Phishing URL detection technology?</div>
+        <div id="answer3" class="answer">Phishing URL detection technologies continuously improve but are not foolproof.
+            They employ machine learning algorithms and heuristics to detect potential threats accurately. However,
+            users should remain cautious and apply their judgment when assessing the legitimacy of URLs.
+        </div>
+        <div class="question" onclick="toggleAnswer('answer4')">4. Where can I find more information about Phishing and URL security?</div>
+        <div id="answer4" class="answer">You can find more information on our website's resources section or through
+            reputable cybersecurity sources. Additionally, consider checking our blog or knowledge base for articles on
+            URL security and Phishing prevention tips.
+        </div>
+    </div>
+</body>
+
+</html>
