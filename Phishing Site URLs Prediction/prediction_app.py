@@ -1,4 +1,3 @@
-#--------------------------------Updated code with integration of UI-------------------------------#
 import uvicorn
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
@@ -21,10 +20,10 @@ async def predict_post(request: Request, features: str = Form(...)):
     X_predict = [features]
     y_Predict = phish_model.predict(X_predict)
     if y_Predict[0] == 'bad':
-        result = "This is a Phishing Site"
+        result = "This can be Phishing Site"
     else:
-        result = "This is not a Phishing Site"
-
+        result = "This cannot be Phishing Site"
+        
     return templates.TemplateResponse("index.html", {"request": request, "features": features, "result": result})
 
 if __name__ == '__main__':
